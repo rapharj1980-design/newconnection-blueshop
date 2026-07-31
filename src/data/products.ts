@@ -456,14 +456,14 @@ export const produtos: Produto[] = [
     "nome": "Microfone de Lapela Bluetooth Tipo-C (KAPBOM)",
     "preco": "R$ 39,90",
     "descricao": "Plug and play. Receptor tipo-C. Bateria recarregável de longa duração. Redução inteligente de ruído. Ideal para vídeos, lives e aulas",
-    "categoria": "Fones de Ouvido"
+    "categoria": "Informática & Gamer"
   },
   {
     "id": 64,
     "nome": "Microfone de Lapela Bluetooth Lightning (KAPBOM)",
     "preco": "R$ 45,00",
     "descricao": "Plug and play para dispositivos iOS (iPhone/iPad). Bateria recarregável de longa duração. Redução inteligente de ruído. Captação 360 graus",
-    "categoria": "Fones de Ouvido"
+    "categoria": "Informática & Gamer"
   },
   {
     "id": 65,
@@ -533,7 +533,7 @@ export const produtos: Produto[] = [
     "nome": "Webcam Full HD 1080p com Microfone",
     "preco": "R$ 65,00",
     "descricao": "Resolução Full HD 1080p. Microfone com redução de ruído. Clipe de fixação para monitor e notebook. Plug and play via USB",
-    "categoria": "Fones de Ouvido"
+    "categoria": "Informática & Gamer"
   },
   {
     "id": 75,
