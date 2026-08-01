@@ -695,6 +695,33 @@ export const produtos: Produto[] = [
     "preco": "R$ 149,00",
     "descricao": "Bluetooth 5.0, alcance de 10m. Alto-falante de 40mm. Suporta cartão TF de 128MB a 32GB. Até 45h de música e conversa. Carregamento em 1,5h. Rádio FM 87.5-108MHz. Bateria de lítio de 400mAh",
     "categoria": "Fones de Ouvido"
+  },
+  {
+    "id": 98,
+    "nome": "Cabo de Dados PEI-J113-5 (PEINING)",
+    "preco": "R$ 12,50",
+    "descricao": "Modelo PEI-J113-5. Comprimento 1 metro. Saída máxima de 60W. Sincronização de dados e carregamento rápido",
+    "categoria": "Cabos & Adaptadores"
+  },
+  {
+    "id": 99,
+    "nome": "Cabo Micro USB Turbo 1m",
+    "preco": "R$ 9,90",
+    "descricao": "Comprimento 1 metro. Carregamento turbo, 5x mais resistente. Sincronização de dados e carregamento",
+    "categoria": "Cabos & Adaptadores"
+  },
+  {
+    "id": 100,
+    "nome": "Cabo Lightning Turbo 1m",
+    "preco": "R$ 9,90",
+    "descricao": "Comprimento 1 metro. Carregamento turbo, 5x mais resistente. Sincronização de dados e carregamento para dispositivos iOS",
+    "categoria": "Cabos & Adaptadores"
+  },
+  {
+    "id": 101,
+    "nome": "Cabo Micro USB CB715 1m",
+    "preco": "R$ 5,00",
+    "descricao": "Modelo CB715. Comprimento 1 metro. Cabo micro USB para carregamento e transferência de dados",
+    "categoria": "Cabos & Adaptadores"
   }
 ];
-
