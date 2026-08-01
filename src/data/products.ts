@@ -667,5 +667,34 @@ export const produtos: Produto[] = [
     "preco": "R$ 12,00",
     "descricao": "Comprimento 1,2 metros. Padrão brasileiro de 3 pinos. Compatível com computadores, impressoras e monitores. Material reforçado",
     "categoria": "Cabos & Adaptadores"
+  },
+  {
+    "id": 94,
+    "nome": "Fones SOUNDWAVE K8",
+    "preco": "R$ 110,00",
+    "descricao": "Conexão sem fio e rádio FM. Alças ajustáveis com espumas ergonômicas e confortáveis. Bateria de lítio recarregável, entrada USB-C. Microfone embutido com função de chamadas",
+    "categoria": "Fones de Ouvido"
+  },
+  {
+    "id": 95,
+    "nome": "Fone Wireless B-MAX",
+    "preco": "R$ 35,00",
+    "descricao": "Bluetooth 5.3 com alcance de até 10 metros. Até 12 horas de reprodução contínua e carga completa em 2 horas via USB-C. Entrada para cartão SD e conector P2 3.5mm. Design ergonômico e controles integrados. Compatível com iOS e Android",
+    "categoria": "Fones de Ouvido"
+  },
+  {
+    "id": 96,
+    "nome": "Headphone Wireless K9",
+    "preco": "R$ 99,00",
+    "descricao": "Conexão sem fio, rádio FM e controle de volume. Alças ajustáveis com espumas ergonômicas. Bateria de lítio recarregável. Entrada auxiliar P2 e slot para cartão microSD. Microfone embutido",
+    "categoria": "Fones de Ouvido"
+  },
+  {
+    "id": 97,
+    "nome": "Fones de Ouvido Sem Fio Wireless 40mm",
+    "preco": "R$ 149,00",
+    "descricao": "Bluetooth 5.0, alcance de 10m. Alto-falante de 40mm. Suporta cartão TF de 128MB a 32GB. Até 45h de música e conversa. Carregamento em 1,5h. Rádio FM 87.5-108MHz. Bateria de lítio de 400mAh",
+    "categoria": "Fones de Ouvido"
   }
 ];
+
