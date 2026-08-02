@@ -21,4 +21,7 @@ export const imagensPorProduto: Record<number, string> = {
   99: "/produtos/cabo-5.jpg",
   100: "/produtos/cabo-6.jpg",
   101: "/produtos/cabo-7.jpg",
+  102: "/produtos/luminaria-1.jpg",
+  103: "/produtos/garrafa-1.jpg",
+  45: "/produtos/garrafa-2.jpg",
 };
