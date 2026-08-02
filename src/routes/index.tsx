@@ -16,11 +16,11 @@ export const Route = createFileRoute("/")({
         content:
           "Catálogo NewConnection: fones, caixas de som, carregadores, cabos e acessórios eletrônicos com preços de atacado. Peça pelo WhatsApp (21) 98189-8798.",
       },
-      { property: "og:title", content: "NewConnection — Catálogo de Eletrônicos" },
+      { property: "og:title", content: "NewConnection — Catálogo de Eletrônicos no Centro do Rio" },
       {
         property: "og:description",
         content:
-          "Fones, caixas de som, carregadores, cabos e acessórios. Rua Buenos Aires, 112 — Centro, Rio de Janeiro.",
+          "Catálogo NewConnection: fones, caixas de som, carregadores, cabos e acessórios eletrônicos com preços de atacado. Peça pelo WhatsApp (21) 98189-8798.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
