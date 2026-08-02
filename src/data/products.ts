@@ -737,5 +737,12 @@ export const produtos: Produto[] = [
     "preco": "R$ 50,00",
     "descricao": "Capacidade de 1,5 litro. Mantém a temperatura de bebidas quentes ou geladas por horas. Ideal para casa, trabalho e viagens",
     "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 104,
+    "nome": "Aparador de Pelos do Nariz e Contorno 2 em 1",
+    "preco": "R$ 39,90",
+    "descricao": "Material ABS. Potência 2W. Bateria de 350mAh recarregável via USB. Duas funções: aparador de pelos do nariz e acabamento de contorno",
+    "categoria": "Casa & Utilidades"
   }
 ];
