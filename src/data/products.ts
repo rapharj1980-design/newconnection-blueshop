@@ -14,6 +14,7 @@ export const categorias = [
   "Suportes & Capas",
   "Informática & Gamer",
   "Casa & Utilidades",
+  "JBL",
 ] as const;
 
 export const produtos: Produto[] = [
@@ -744,5 +745,26 @@ export const produtos: Produto[] = [
     "preco": "R$ 39,90",
     "descricao": "Material ABS. Potência 2W. Bateria de 350mAh recarregável via USB. Duas funções: aparador de pelos do nariz e acabamento de contorno",
     "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 105,
+    "nome": "JBL FLIP 7",
+    "preco": "R$ 750,00",
+    "descricao": "Caixa de som Bluetooth portátil JBL FLIP 7 com som JBL Pro Sound, graves potentes e resistência à água e poeira.",
+    "categoria": "JBL"
+  },
+  {
+    "id": 106,
+    "nome": "JBL CLIP 5",
+    "preco": "R$ 399,00",
+    "descricao": "Caixa de som compacta JBL CLIP 5 com mosquetão integrado, som potente e resistência à água. Perfeita para levar a qualquer lugar.",
+    "categoria": "JBL"
+  },
+  {
+    "id": 107,
+    "nome": "JBL CHARGE 6",
+    "preco": "R$ 999,00",
+    "descricao": "Caixa de som JBL CHARGE 6 com bateria de longa duração, powerbank integrado e som JBL Pro Sound de alta potência.",
+    "categoria": "JBL"
   }
 ];

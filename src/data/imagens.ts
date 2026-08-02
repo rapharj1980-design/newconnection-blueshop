@@ -27,4 +27,7 @@ export const imagensPorProduto: Record<number, string> = {
   42: "/produtos/suporte-1.jpg",
   90: "/produtos/balanca-1.jpg",
   104: "/produtos/aparador-nariz-1.jpg",
+  105: "/produtos/jbl-1.jpg",
+  106: "/produtos/jbl-2.jpg",
+  107: "/produtos/jbl-3.jpg",
 };
