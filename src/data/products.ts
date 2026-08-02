@@ -723,5 +723,19 @@ export const produtos: Produto[] = [
     "preco": "R$ 5,00",
     "descricao": "Modelo CB715. Comprimento 1 metro. Cabo micro USB para carregamento e transferência de dados",
     "categoria": "Cabos & Adaptadores"
+  },
+  {
+    "id": 102,
+    "nome": "Luminária Decorativa de Mesa",
+    "preco": "R$ 35,00",
+    "descricao": "Luminária decorativa de mesa. Luz ambiente para quarto, sala ou escritório. Design moderno e compacto",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 103,
+    "nome": "Garrafa Térmica 1,5L",
+    "preco": "R$ 50,00",
+    "descricao": "Capacidade de 1,5 litro. Mantém a temperatura de bebidas quentes ou geladas por horas. Ideal para casa, trabalho e viagens",
+    "categoria": "Casa & Utilidades"
   }
 ];
