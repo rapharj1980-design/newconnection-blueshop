@@ -303,16 +303,20 @@ function Catalogo() {
         </div>
       </footer>
 
-      {/* Botão flutuante */}
-      <a
-        href={waLink("Olá NewConnection! Quero fazer um pedido.")}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Fale conosco pelo WhatsApp"
-        className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-glow transition-transform hover:scale-105"
-      >
-        <MessageCircle className="h-6 w-6" aria-hidden="true" />
-      </a>
+      {/* Botões flutuantes */}
+      <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
+        <a
+          href={waLink("Olá NewConnection! Quero tirar uma dúvida.")}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Fale conosco pelo WhatsApp"
+          className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-glow transition-transform hover:scale-105"
+        >
+          <MessageCircle className="h-5 w-5" aria-hidden="true" />
+        </a>
+        <BotaoCarrinho className="h-14 shadow-glow" />
+      </div>
+
     </div>
   );
 }
