@@ -15,6 +15,7 @@ export const categorias = [
   "Informática & Gamer",
   "Casa & Utilidades",
   "JBL",
+  "Relógios & Wearables",
 ] as const;
 
 export const produtos: Produto[] = [
@@ -766,5 +767,460 @@ export const produtos: Produto[] = [
     "preco": "R$ 999,00",
     "descricao": "Caixa de som JBL CHARGE 6 com bateria de longa duração, powerbank integrado e som JBL Pro Sound de alta potência.",
     "categoria": "JBL"
+  },
+  {
+    "id": 108,
+    "nome": "Caixa de Som Portátil Series Mode",
+    "preco": "R$ 99,00",
+    "descricao": "Series Mode , potencia de saida , recurso de alarme, monitoramento de temperatura. modelo SM-55 15W alta potencia, radio FM, pen drive resistente a água, cartão TF.",
+    "categoria": "Áudio & Som"
+  },
+  {
+    "id": 109,
+    "nome": "Localizador iTag Bluetooth",
+    "preco": "R$ 39,00",
+    "descricao": "Localizador iTag Bluetooth",
+    "categoria": "Informática & Gamer"
+  },
+  {
+    "id": 110,
+    "nome": "Mini Smart Watch RL-33",
+    "preco": "R$ 199,00",
+    "descricao": "Mini Smart Watch RL-33",
+    "categoria": "Relógios & Wearables"
+  },
+  {
+    "id": 111,
+    "nome": "Alexa Echo Show 5",
+    "preco": "R$ 770,00",
+    "descricao": "Alexa Echo Show 5",
+    "categoria": "Informática & Gamer"
+  },
+  {
+    "id": 112,
+    "nome": "Caixa de Som 80W",
+    "preco": "R$ 429,90",
+    "descricao": "Caixa de Som 80W",
+    "categoria": "Áudio & Som"
+  },
+  {
+    "id": 113,
+    "nome": "Tripé Profissional para Smartphone com Controle Remoto",
+    "preco": "R$ 149,00",
+    "descricao": "ALÇA DE BALANCEAMENTO EXPANDA A BRAÇADEIRA DUPLA CONTROLE REMOTO ROTAÇÃO DE 360 QUADRAPÉ ESTAVEL LIGA DE ALUMÍNIO",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 114,
+    "nome": "Copo Beer Pints 360ml",
+    "preco": "Sob consulta",
+    "descricao": "Copo da beer pints de 360ml",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 115,
+    "nome": "Chaleira Elétrica com Base de Energia",
+    "preco": "R$ 79,00",
+    "descricao": "Chaleira Elétrica com Base de Energia",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 116,
+    "nome": "Bomba de Ar Inteligente Sem Fio",
+    "preco": "R$ 130,00",
+    "descricao": "CARRO MOTOCICLETAS BICICLETAS BOLA DE FUTEBOL",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 117,
+    "nome": "Fone KAIDI TWS Gamer com Cancelamento de Ruído",
+    "preco": "R$ 79,00",
+    "descricao": "Fone KAIDI TWS Gamer com Cancelamento de Ruído",
+    "categoria": "Fones de Ouvido"
+  },
+  {
+    "id": 118,
+    "nome": "JBL GO 5",
+    "preco": "R$ 359,00",
+    "descricao": "JBL GO 5",
+    "categoria": "JBL"
+  },
+  {
+    "id": 119,
+    "nome": "Caixa de Som Master Som IPX6",
+    "preco": "R$ 115,00",
+    "descricao": "Master som, microfone, atende chamada telefonicas , wireless, IPX6 resitente a água, ate 10 horas, entrada micro SD, entrada USB, RADIO FM. 1",
+    "categoria": "Áudio & Som"
+  },
+  {
+    "id": 120,
+    "nome": "Caixa de Som HREBOS PREMIUM 40W",
+    "preco": "R$ 145,00",
+    "descricao": "Potência de saída: 40W Capacidade de bateria:3600mAh versão bluetooth: V5.3 Duração da Bateria: 3-4H Classificação à prova d´água: IPX4 1",
+    "categoria": "Áudio & Som"
+  },
+  {
+    "id": 121,
+    "nome": "Capa iPhone 15",
+    "preco": "R$ 39,00",
+    "descricao": "CORES AZUL MARINHO,BEGE,PRETO,CINZA,LARANJA E MARRON",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 122,
+    "nome": "Massage Gun - Massageador de Terapia Percussiva",
+    "preco": "R$ 59,90",
+    "descricao": "MASSAGE GUN E UM DISPOSITIVO DE TERAPIA PERCUSSIVA. ELA USA VIBRAÇÕES RAPIDAS PARA SOLTAR MÚSCULOS TENSOS,MELHORAR O FLUXO DE SANGUE E ACELERAR A RECUPERAÇÃO APÓS EXERCICIOS FISICOS. CONTEM;4 PONTEIRAS DIFERENTES PARA ATINGIR PARTES ESPECIFICAS DO CORPO! PONTEIRA REDONDA: IDEAL PARA GRANDES GRUPOS MUSCULARES(COMO COXAS E GLÚTEOS) PONTEIRA PLANA: IDEAL PARA ÁREAS PLANAS E RELAXAMENTO GERAL. PONTEIRAS BALA(FORMATO DE ÁRVORE):IDEAL PARA PONTOS DE GATILHO PROFUNDOS E NÓS MUSCULARES. PONTO EM ''U'' ARCO: IDEAL PARA A COLUNA,PESCOÇO E TENDÃO E AQUILES.",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 123,
+    "nome": "Massageador Portátil",
+    "preco": "R$ 79,00",
+    "descricao": "Massageador Portátil",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 124,
+    "nome": "Suporte para Tablet Dobrável Multifunções",
+    "preco": "R$ 79,00",
+    "descricao": "ROTAÇÃO DE 360 AJUSTE DE 180 TABLETS TELEFONES CELULARES DENTRO DE 12 POLEGADAS",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 125,
+    "nome": "Mouse Sem Fio",
+    "preco": "R$ 25,00",
+    "descricao": "Mouse Sem Fio",
+    "categoria": "Informática & Gamer"
+  },
+  {
+    "id": 126,
+    "nome": "Fone de Ouvido Sem Fio KAIDI",
+    "preco": "R$ 59,00",
+    "descricao": "Fone de Ouvido Sem Fio KAIDI",
+    "categoria": "Fones de Ouvido"
+  },
+  {
+    "id": 127,
+    "nome": "Microfone Duplo de Lapela",
+    "preco": "R$ 99,00",
+    "descricao": "Microfone Duplo de Lapela",
+    "categoria": "Informática & Gamer"
+  },
+  {
+    "id": 128,
+    "nome": "Fonte de Alimentação 15W",
+    "preco": "R$ 15,00",
+    "descricao": "PROTEÇÃO DE SOBRECORRENTE PROTEÇÃO CONTRA CURTO-CIRCUITO PROTEÇÃO SOBRE TENSÃO PROTEÇÃO DE TEMPERATURA",
+    "categoria": "Carregadores & Energia"
+  },
+  {
+    "id": 129,
+    "nome": "Processador de Alimentos Manual",
+    "preco": "R$ 14,90",
+    "descricao": "VEGETAIS CARNES ALHO PIMENTAS",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 130,
+    "nome": "Caixa de Som Karaokê 10W RMS",
+    "preco": "R$ 89,00",
+    "descricao": "Conexão , blueconnect 5.3 potencia máxima 10W RMS bateria caixa de som 1.200mah bateria de microfone 500mah tamanho; 143x68x87mm. peso 405g ,funções-blueconnect, microfone , radio FM ,USB,cartão TF e aux,modo USB e TF ate 32gb.",
+    "categoria": "Áudio & Som"
+  },
+  {
+    "id": 131,
+    "nome": "Capa iPhone 15 Pro Max",
+    "preco": "R$ 39,00",
+    "descricao": "CORES AZUL MARINHO,BEGE,PRETO,CINZA,LARANJA E MARRON",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 132,
+    "nome": "Suporte para Laptop",
+    "preco": "R$ 25,00",
+    "descricao": "MATERIA DO PRODUTO;liga, metalica+ silicone , peso do produto; 361g, cor do produto; preto , e prata!",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 133,
+    "nome": "Cortador de Cabelos Sem Fio",
+    "preco": "R$ 59,00",
+    "descricao": "Material; abs+metal, potencia; 5w, velocidade de motor:6000-6500 rpm, voltagem:5v-1A bateria:1200mah , tempo de carregamento: tipo-C 2HORAS, TEMPO DE USO:150 MINUTOS.",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 134,
+    "nome": "Carregador Veicular Turbo PD+QC Auto ID 38W",
+    "preco": "R$ 25,00",
+    "descricao": "TURBO 38W POTÊNCIA TIPO LIGHTNING",
+    "categoria": "Carregadores & Energia"
+  },
+  {
+    "id": 135,
+    "nome": "Kit de Gravação 4 em 1",
+    "preco": "R$ 49,00",
+    "descricao": "CONTEM; soquete de microfone de 3,5 mm, sapata com parafuso de de 1/4 , interface principal, apoio de Mao, LED 49R controle remoto!",
+    "categoria": "Informática & Gamer"
+  },
+  {
+    "id": 136,
+    "nome": "Smart Watch RL-11",
+    "preco": "R$ 189,00",
+    "descricao": "Smart Watch RL-11",
+    "categoria": "Relógios & Wearables"
+  },
+  {
+    "id": 137,
+    "nome": "Fonte de Alimentação 25W",
+    "preco": "R$ 25,90",
+    "descricao": "Fonte de Alimentação 25W",
+    "categoria": "Carregadores & Energia"
+  },
+  {
+    "id": 138,
+    "nome": "Balança Digital Personalizada",
+    "preco": "R$ 79,00",
+    "descricao": "ALTA PRECISÃO PELO SISTEMA DE SENSOR VIDRO TEMPERADO:6MM CAPACIDADE 2,5-180Kg DISPLAY:4 DIGITOS LCD POT~ENCIA:1,5 2AAA BATERIA DESLIGAMENTO DEPOIS DE 10 SEGUNDOS",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 139,
+    "nome": "Capa iPhone 17 Pro Max (PEINING)",
+    "preco": "R$ 39,00",
+    "descricao": "CORES AZUL MARINHO,BEGE,PRETO,CINZA,LARANJA E MARRON",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 140,
+    "nome": "Suporte de Celular para Carro",
+    "preco": "R$ 19,90",
+    "descricao": "Suporte de Celular para Carro",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 141,
+    "nome": "Capa iPhone 16 Pro Max",
+    "preco": "R$ 39,00",
+    "descricao": "CORES AZUL MARINHO,BEGE,PRETO,CINZA,LARANJA E MARRON",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 142,
+    "nome": "Smart Watch RL-13",
+    "preco": "R$ 189,00",
+    "descricao": "Smart Watch RL-13",
+    "categoria": "Relógios & Wearables"
+  },
+  {
+    "id": 143,
+    "nome": "Smart Watch RL-34",
+    "preco": "R$ 149,00",
+    "descricao": "Smart Watch RL-34",
+    "categoria": "Relógios & Wearables"
+  },
+  {
+    "id": 144,
+    "nome": "Ultra Power Carregador Portátil 10000mAh",
+    "preco": "R$ 95,00",
+    "descricao": "Ultra Power Carregador Portátil 10000mAh",
+    "categoria": "Carregadores & Energia"
+  },
+  {
+    "id": 145,
+    "nome": "Smart Watch RL-10",
+    "preco": "R$ 199,00",
+    "descricao": "Smart Watch RL-10",
+    "categoria": "Relógios & Wearables"
+  },
+  {
+    "id": 146,
+    "nome": "Capas Coloridas para Celular",
+    "preco": "R$ 15,00",
+    "descricao": "IPHONES14,15,16,17 SAMSUNG A06 5G A07 A16 A17 A25 A36 A37 A56 A57 A54 A56 S26 26PRO S23,S3 ULTRA S26 ULTRA S25 FE MOTORO LA G05 G34 G35 M26a EDGE 50 EDGE 60PRO EDGE 70 FUSION G67,77 G",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 147,
+    "nome": "Capas Transparentes para Celular",
+    "preco": "R$ 10,00",
+    "descricao": "IPHONES 15,16,17 E 17 PRO MAX S26 ULTRA, A17, M17, A26 5G,A36,A37 5G , A57 5G ,",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 148,
+    "nome": "Mixer Portátil 3 Velocidades",
+    "preco": "R$ 49,00",
+    "descricao": "RESISTENCIA LONGA, AJUSTE DE 3 VELOCIDADES MOLA PRA ESPUMA",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 149,
+    "nome": "Fone LEHMOX E-Sports Auricular Gamer",
+    "preco": "R$ 69,00",
+    "descricao": "Fone LEHMOX E-Sports Auricular Gamer",
+    "categoria": "Fones de Ouvido"
+  },
+  {
+    "id": 150,
+    "nome": "Kit Carregador Veicular Tipo-C 60W",
+    "preco": "R$ 25,00",
+    "descricao": "ENTRADA: DC12-24V SAIDA: DC5V=5.1A 60W",
+    "categoria": "Carregadores & Energia"
+  },
+  {
+    "id": 151,
+    "nome": "Fone de Ouvido de Capacete Bluetooth",
+    "preco": "R$ 99,00",
+    "descricao": "Fone de Ouvido de Capacete Bluetooth",
+    "categoria": "Fones de Ouvido"
+  },
+  {
+    "id": 152,
+    "nome": "Garrafa Térmica 1000ml BM-P1530",
+    "preco": "R$ 49,00",
+    "descricao": "1000 ML BM-P1530",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 153,
+    "nome": "Capa iPhone 16",
+    "preco": "R$ 39,00",
+    "descricao": "CORES AZUL MARINHO,BEGE,PRETO,CINZA,LARANJA E MARRON",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 154,
+    "nome": "Moedor de Café Portátil Recarregável",
+    "preco": "R$ 99,00",
+    "descricao": "COM BATERIA RECARREGAVELO COM CHAVE DE OPERAÇÃO COM BOTÃO ANTIRUIDO FORTE DURAÇÃO DE BATERIA",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 155,
+    "nome": "Cabo de Dados 2 em 1 CB113",
+    "preco": "R$ 15,00",
+    "descricao": "MODELO; CB113 , COMPRIMENTO;1 METRO FUNÇÃO; SUPORTA CARREGAMENTO TURBO 30W/60W (MAX)",
+    "categoria": "Cabos & Adaptadores"
+  },
+  {
+    "id": 156,
+    "nome": "Copo Stainless Steel",
+    "preco": "R$ 39,90",
+    "descricao": "Copo Stainless Steel",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 157,
+    "nome": "Temporizador com Indução por Gravidade",
+    "preco": "R$ 69,00",
+    "descricao": "Temporizador com Indução por Gravidade",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 158,
+    "nome": "Bolsa Térmica",
+    "preco": "R$ 39,00",
+    "descricao": "Bolsa Térmica",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 159,
+    "nome": "Capas Pretas para Celular",
+    "preco": "R$ 15,00",
+    "descricao": "IPONES 14,15,16,17 SAMSUNG A06 5G A07 A16 A17 A25 A36 A37 A56 A57 A54 A56 S26 26PRO S26 ULTRA S25 FE MOTOROLA G05 G34 G35 M26a EDGE 50 EDGE 60PRO EDGE 70 FUSION G67,77 G",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 160,
+    "nome": "Copo Stainless 1200ml Inoxidável",
+    "preco": "Sob consulta",
+    "descricao": "COPO DE 1200ML INOXIDAVEL DE QUALIDADE ALIMENTAR!",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 161,
+    "nome": "Caixa de Som KIMASTER IPX6",
+    "preco": "R$ 179,00",
+    "descricao": "Microfone embutido Atende chamadas telefônicas Wireless IPX6 resistente á água até 10 horas entrada micro SD Entrada USB Rádio FM",
+    "categoria": "Áudio & Som"
+  },
+  {
+    "id": 162,
+    "nome": "Fone de Ouvido Gamer",
+    "preco": "R$ 65,00",
+    "descricao": "Fone de Ouvido Gamer",
+    "categoria": "Fones de Ouvido"
+  },
+  {
+    "id": 163,
+    "nome": "Suporte Veicular Magnético para Celular",
+    "preco": "R$ 15,00",
+    "descricao": "Suporte Veicular Magnético para Celular",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 164,
+    "nome": "Capa iPhone 17",
+    "preco": "R$ 39,00",
+    "descricao": "CORES AZUL MARINHO,BEGE,PRETO,CINZA,LARANJA E MARRON",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 165,
+    "nome": "Capa iPhone Pro",
+    "preco": "R$ 39,00",
+    "descricao": "CORES AZUL MARINHO,BEGE,PRETO,CINZA,LARANJA E MARRON",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 166,
+    "nome": "Mini Smart Watch RL-12",
+    "preco": "R$ 179,00",
+    "descricao": "Mini Smart Watch RL-12",
+    "categoria": "Relógios & Wearables"
+  },
+  {
+    "id": 167,
+    "nome": "Microfone de Lapela",
+    "preco": "R$ 69,00",
+    "descricao": "Microfone de Lapela",
+    "categoria": "Informática & Gamer"
+  },
+  {
+    "id": 168,
+    "nome": "Capa iPhone 17 Pro",
+    "preco": "R$ 39,00",
+    "descricao": "CORES AZUL MARINHO,BEGE,PRETO,CINZA,LARANJA E MARRON",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 169,
+    "nome": "Barbeador e Aparador 3 em 1",
+    "preco": "R$ 79,00",
+    "descricao": "APARADOR DE PELOS DO NARIZ E CONTORNO E CABELO/ LAMINA DE BARBEAR 3 EM 1, MOTOR DE ALTA POTENCIA 6800RPM, 3D SISTEMA INDENPENDENTE DE FECHAMENTO FRONTAL DE 360 GRAUS, BATERIA 500MAH!",
+    "categoria": "Casa & Utilidades"
+  },
+  {
+    "id": 170,
+    "nome": "Suporte de Celular Projetado para o Carro",
+    "preco": "R$ 19,00",
+    "descricao": "Suporte de Celular Projetado para o Carro",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 171,
+    "nome": "Suporte para Celular",
+    "preco": "R$ 25,90",
+    "descricao": "Suporte para Celular",
+    "categoria": "Suportes & Capas"
+  },
+  {
+    "id": 172,
+    "nome": "Power Bank (PEINING)",
+    "preco": "R$ 70,00",
+    "descricao": "Power Bank (PEINING)",
+    "categoria": "Carregadores & Energia"
   }
 ];
