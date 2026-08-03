@@ -1,10 +1,12 @@
-import { MessageCircle } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import type { Produto } from "@/data/products";
-import { waLink } from "@/data/contato";
 import { imagensPorProduto } from "@/data/imagens";
+import { useCart } from "./CartContext";
 
 export function ProductCard({ produto }: { produto: Produto }) {
+  const { adicionar } = useCart();
   const imagem = imagensPorProduto[produto.id];
+
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-glow">
       <div className="relative h-1.5 w-full bg-gradient-brand" />
