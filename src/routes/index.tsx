@@ -1,11 +1,14 @@
 import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, MessageCircle, Phone, Search, ShieldCheck, Truck, Zap } from "lucide-react";
+import { MapPin, MessageCircle, Phone, Search, ShieldCheck, ShoppingCart, Truck, Zap } from "lucide-react";
 
 import heroImg from "@/assets/hero.jpg";
 import { produtos, categorias } from "@/data/products";
 import { EMPRESA, ENDERECO, WHATSAPP_EXIBICAO, waLink } from "@/data/contato";
 import { ProductCard } from "@/components/catalogo/ProductCard";
+import { CartProvider, useCart } from "@/components/catalogo/CartContext";
+import { CartDrawer } from "@/components/catalogo/CartDrawer";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,7 +47,37 @@ const diferenciais = [
 ];
 
 function Index() {
+  return (
+    <CartProvider>
+      <Catalogo />
+      <CartDrawer />
+    </CartProvider>
+  );
+}
+
+function BotaoCarrinho({ className = "" }: { className?: string }) {
+  const { totalItens, setAberto } = useCart();
+  return (
+    <button
+      type="button"
+      onClick={() => setAberto(true)}
+      aria-label="Abrir pedido"
+      className={`relative inline-flex items-center gap-2 rounded-xl bg-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 ${className}`}
+    >
+      <ShoppingCart className="h-4 w-4" aria-hidden="true" />
+      Meu pedido
+      {totalItens > 0 && (
+        <span className="absolute -right-1.5 -top-1.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[11px] font-bold text-primary-foreground">
+          {totalItens}
+        </span>
+      )}
+    </button>
+  );
+}
+
+function Catalogo() {
   const [busca, setBusca] = useState("");
+
 
   const filtrados = useMemo(() => {
     const q = slug(busca);
@@ -88,15 +121,8 @@ function Index() {
               </a>
             ))}
           </nav>
-          <a
-            href={waLink("Olá NewConnection! Quero fazer um pedido.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="order-2 ml-auto inline-flex items-center gap-2 rounded-xl bg-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 md:order-3"
-          >
-            <MessageCircle className="h-4 w-4" aria-hidden="true" />
-            Pedir agora
-          </a>
+          <BotaoCarrinho className="order-2 ml-auto md:order-3" />
+
         </div>
       </header>
 
@@ -277,16 +303,20 @@ function Index() {
         </div>
       </footer>
 
-      {/* Botão flutuante */}
-      <a
-        href={waLink("Olá NewConnection! Quero fazer um pedido.")}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Fale conosco pelo WhatsApp"
-        className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-glow transition-transform hover:scale-105"
-      >
-        <MessageCircle className="h-6 w-6" aria-hidden="true" />
-      </a>
+      {/* Botões flutuantes */}
+      <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
+        <a
+          href={waLink("Olá NewConnection! Quero tirar uma dúvida.")}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Fale conosco pelo WhatsApp"
+          className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-glow transition-transform hover:scale-105"
+        >
+          <MessageCircle className="h-5 w-5" aria-hidden="true" />
+        </a>
+        <BotaoCarrinho className="h-14 shadow-glow" />
+      </div>
+
     </div>
   );
 }
