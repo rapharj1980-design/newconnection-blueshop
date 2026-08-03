@@ -121,15 +121,8 @@ function Catalogo() {
               </a>
             ))}
           </nav>
-          <a
-            href={waLink("Olá NewConnection! Quero fazer um pedido.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="order-2 ml-auto inline-flex items-center gap-2 rounded-xl bg-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 md:order-3"
-          >
-            <MessageCircle className="h-4 w-4" aria-hidden="true" />
-            Pedir agora
-          </a>
+          <BotaoCarrinho className="order-2 ml-auto md:order-3" />
+
         </div>
       </header>
 
