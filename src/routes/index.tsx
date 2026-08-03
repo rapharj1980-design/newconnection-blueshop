@@ -1,11 +1,14 @@
 import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, MessageCircle, Phone, Search, ShieldCheck, Truck, Zap } from "lucide-react";
+import { MapPin, MessageCircle, Phone, Search, ShieldCheck, ShoppingCart, Truck, Zap } from "lucide-react";
 
 import heroImg from "@/assets/hero.jpg";
 import { produtos, categorias } from "@/data/products";
 import { EMPRESA, ENDERECO, WHATSAPP_EXIBICAO, waLink } from "@/data/contato";
 import { ProductCard } from "@/components/catalogo/ProductCard";
+import { CartProvider, useCart } from "@/components/catalogo/CartContext";
+import { CartDrawer } from "@/components/catalogo/CartDrawer";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
