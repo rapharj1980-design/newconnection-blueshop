@@ -36,15 +36,15 @@ export function ProductCard({ produto }: { produto: Produto }) {
         <div className="mt-auto flex items-center justify-between gap-3 pt-3">
           <span className="text-2xl font-bold text-gradient-brand font-display">{produto.preco}</span>
         </div>
-        <a
-          href={waLink(`Olá NewConnection! Tenho interesse no produto: ${produto.nome} (${produto.preco}).`)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-4 py-3 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90"
+        <button
+          type="button"
+          onClick={() => adicionar(produto)}
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
         >
-          <MessageCircle className="h-4 w-4" aria-hidden="true" />
-          Comprar pelo WhatsApp
-        </a>
+          <ShoppingCart className="h-4 w-4" aria-hidden="true" />
+          Adicionar ao pedido
+        </button>
+
       </div>
     </article>
   );
