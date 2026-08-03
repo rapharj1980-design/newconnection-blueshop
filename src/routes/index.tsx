@@ -44,7 +44,37 @@ const diferenciais = [
 ];
 
 function Index() {
+  return (
+    <CartProvider>
+      <Catalogo />
+      <CartDrawer />
+    </CartProvider>
+  );
+}
+
+function BotaoCarrinho({ className = "" }: { className?: string }) {
+  const { totalItens, setAberto } = useCart();
+  return (
+    <button
+      type="button"
+      onClick={() => setAberto(true)}
+      aria-label="Abrir pedido"
+      className={`relative inline-flex items-center gap-2 rounded-xl bg-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 ${className}`}
+    >
+      <ShoppingCart className="h-4 w-4" aria-hidden="true" />
+      Meu pedido
+      {totalItens > 0 && (
+        <span className="absolute -right-1.5 -top-1.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[11px] font-bold text-primary-foreground">
+          {totalItens}
+        </span>
+      )}
+    </button>
+  );
+}
+
+function Catalogo() {
   const [busca, setBusca] = useState("");
+
 
   const filtrados = useMemo(() => {
     const q = slug(busca);
