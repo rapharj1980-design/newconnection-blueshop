@@ -115,12 +115,13 @@ function Catalogo() {
               <a
                 key={c}
                 href={`#${slug(c)}`}
-                className="whitespace-nowrap rounded-full px-3 py-1.5 text-muted-foreground transition-colors hover:bg-secondary hover:text-secondary-foreground"
+                className="whitespace-nowrap rounded-xl border border-border bg-gradient-soft px-3 py-1.5 font-semibold text-foreground shadow-card transition-all hover:-translate-y-0.5 hover:bg-gradient-brand hover:text-primary-foreground hover:shadow-glow"
               >
                 {c}
               </a>
             ))}
           </nav>
+
           <BotaoCarrinho className="order-2 ml-auto md:order-3" />
 
         </div>
