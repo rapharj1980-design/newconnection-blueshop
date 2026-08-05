@@ -22,7 +22,9 @@ export function isMuted() {
 
 export function subscribeMuted(fn: (muted: boolean) => void) {
   listeners.add(fn);
-  return () => listeners.delete(fn);
+  return () => {
+    listeners.delete(fn);
+  };
 }
 
 export function loadMutedFromStorage() {
