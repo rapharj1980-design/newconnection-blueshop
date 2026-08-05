@@ -39,7 +39,10 @@ export function ProductCard({ produto }: { produto: Produto }) {
         </div>
         <button
           type="button"
-          onClick={() => adicionar(produto)}
+          onClick={() => {
+            playSound("pop");
+            adicionar(produto);
+          }}
           className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
         >
           <ShoppingCart className="h-4 w-4" aria-hidden="true" />
