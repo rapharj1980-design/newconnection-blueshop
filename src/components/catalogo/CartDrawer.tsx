@@ -117,7 +117,7 @@ export function CartDrawer() {
                 }
                 playSound("chime");
               }}
-              className={`inline-flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-4 py-3.5 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 ${
+              className={`btn-3d btn-3d-whatsapp inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold text-whatsapp-foreground ${
                 itens.length === 0 ? "pointer-events-none opacity-50" : ""
               }`}
             >
