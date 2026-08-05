@@ -1,6 +1,7 @@
 import { ShoppingCart } from "lucide-react";
 import type { Produto } from "@/data/products";
 import { imagensPorProduto } from "@/data/imagens";
+import { playSound } from "@/lib/ui-sound";
 import { useCart } from "./CartContext";
 
 export function ProductCard({ produto }: { produto: Produto }) {
