@@ -8,6 +8,8 @@ import { EMPRESA, ENDERECO, WHATSAPP_EXIBICAO, waLink } from "@/data/contato";
 import { ProductCard } from "@/components/catalogo/ProductCard";
 import { CartProvider, useCart } from "@/components/catalogo/CartContext";
 import { CartDrawer } from "@/components/catalogo/CartDrawer";
+import { SoundToggle } from "@/components/catalogo/SoundToggle";
+import { playSound } from "@/lib/ui-sound";
 
 
 export const Route = createFileRoute("/")({
@@ -60,7 +62,10 @@ function BotaoCarrinho({ className = "" }: { className?: string }) {
   return (
     <button
       type="button"
-      onClick={() => setAberto(true)}
+      onClick={() => {
+        playSound("chime");
+        setAberto(true);
+      }}
       aria-label="Abrir pedido"
       className={`relative inline-flex items-center gap-2 rounded-xl bg-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 ${className}`}
     >
@@ -115,6 +120,7 @@ function Catalogo() {
               <a
                 key={c}
                 href={`#${slug(c)}`}
+                onClick={() => playSound("tap")}
                 className="whitespace-nowrap rounded-xl border border-border bg-gradient-soft px-3 py-1.5 font-semibold text-foreground shadow-card transition-all hover:-translate-y-0.5 hover:bg-gradient-brand hover:text-primary-foreground hover:shadow-glow"
               >
                 {c}
@@ -122,7 +128,11 @@ function Catalogo() {
             ))}
           </nav>
 
-          <BotaoCarrinho className="order-2 ml-auto md:order-3" />
+          <div className="order-2 ml-auto flex items-center gap-2 md:order-3">
+            <SoundToggle />
+            <BotaoCarrinho />
+          </div>
+
 
         </div>
       </header>

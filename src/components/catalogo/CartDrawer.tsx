@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { useCart, formatarBRL, precoNumero } from "./CartContext";
 import { waLink } from "@/data/contato";
 import { imagensPorProduto } from "@/data/imagens";
+import { playSound } from "@/lib/ui-sound";
 
 export function CartDrawer() {
   const { itens, aberto, setAberto, alterarQtd, remover, limpar, total, totalItens } = useCart();
@@ -54,7 +55,10 @@ export function CartDrawer() {
                         <button
                           type="button"
                           aria-label={`Diminuir quantidade de ${produto.nome}`}
-                          onClick={() => alterarQtd(produto.id, -1)}
+                          onClick={() => {
+                            playSound("tap");
+                            alterarQtd(produto.id, -1);
+                          }}
                           className="px-2 py-1 text-muted-foreground transition-colors hover:text-foreground"
                         >
                           <Minus className="h-3.5 w-3.5" aria-hidden="true" />
@@ -63,19 +67,26 @@ export function CartDrawer() {
                         <button
                           type="button"
                           aria-label={`Aumentar quantidade de ${produto.nome}`}
-                          onClick={() => alterarQtd(produto.id, 1)}
+                          onClick={() => {
+                            playSound("pop");
+                            alterarQtd(produto.id, 1);
+                          }}
                           className="px-2 py-1 text-muted-foreground transition-colors hover:text-foreground"
                         >
                           <Plus className="h-3.5 w-3.5" aria-hidden="true" />
                         </button>
                       </div>
+
                       <span className="text-sm font-bold text-gradient-brand">
                         {formatarBRL(precoNumero(produto.preco) * qtd)}
                       </span>
                       <button
                         type="button"
                         aria-label={`Remover ${produto.nome} do pedido`}
-                        onClick={() => remover(produto.id)}
+                        onClick={() => {
+                          playSound("tap");
+                          remover(produto.id);
+                        }}
                         className="text-muted-foreground transition-colors hover:text-destructive"
                       >
                         <Trash2 className="h-4 w-4" aria-hidden="true" />
@@ -100,7 +111,11 @@ export function CartDrawer() {
               rel="noopener noreferrer"
               aria-disabled={itens.length === 0}
               onClick={(e) => {
-                if (itens.length === 0) e.preventDefault();
+                if (itens.length === 0) {
+                  e.preventDefault();
+                  return;
+                }
+                playSound("chime");
               }}
               className={`inline-flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-4 py-3.5 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 ${
                 itens.length === 0 ? "pointer-events-none opacity-50" : ""
@@ -112,7 +127,10 @@ export function CartDrawer() {
             <div className="flex gap-2">
               <button
                 type="button"
-                onClick={() => setAberto(false)}
+                onClick={() => {
+                  playSound("tap");
+                  setAberto(false);
+                }}
                 className="flex-1 rounded-xl border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
               >
                 Continuar comprando
@@ -120,13 +138,17 @@ export function CartDrawer() {
               {itens.length > 0 && (
                 <button
                   type="button"
-                  onClick={limpar}
+                  onClick={() => {
+                    playSound("tap");
+                    limpar();
+                  }}
                   className="rounded-xl border border-border px-4 py-2.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-destructive"
                 >
                   Limpar
                 </button>
               )}
             </div>
+
           </div>
         </div>
       </SheetContent>
