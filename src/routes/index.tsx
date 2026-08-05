@@ -62,7 +62,10 @@ function BotaoCarrinho({ className = "" }: { className?: string }) {
   return (
     <button
       type="button"
-      onClick={() => setAberto(true)}
+      onClick={() => {
+        playSound("chime");
+        setAberto(true);
+      }}
       aria-label="Abrir pedido"
       className={`relative inline-flex items-center gap-2 rounded-xl bg-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 ${className}`}
     >
