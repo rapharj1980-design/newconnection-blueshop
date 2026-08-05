@@ -55,7 +55,10 @@ export function CartDrawer() {
                         <button
                           type="button"
                           aria-label={`Diminuir quantidade de ${produto.nome}`}
-                          onClick={() => alterarQtd(produto.id, -1)}
+                          onClick={() => {
+                            playSound("tap");
+                            alterarQtd(produto.id, -1);
+                          }}
                           className="px-2 py-1 text-muted-foreground transition-colors hover:text-foreground"
                         >
                           <Minus className="h-3.5 w-3.5" aria-hidden="true" />
@@ -64,12 +67,16 @@ export function CartDrawer() {
                         <button
                           type="button"
                           aria-label={`Aumentar quantidade de ${produto.nome}`}
-                          onClick={() => alterarQtd(produto.id, 1)}
+                          onClick={() => {
+                            playSound("pop");
+                            alterarQtd(produto.id, 1);
+                          }}
                           className="px-2 py-1 text-muted-foreground transition-colors hover:text-foreground"
                         >
                           <Plus className="h-3.5 w-3.5" aria-hidden="true" />
                         </button>
                       </div>
+
                       <span className="text-sm font-bold text-gradient-brand">
                         {formatarBRL(precoNumero(produto.preco) * qtd)}
                       </span>
