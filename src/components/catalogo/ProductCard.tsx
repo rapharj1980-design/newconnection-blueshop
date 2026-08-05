@@ -43,7 +43,7 @@ export function ProductCard({ produto }: { produto: Produto }) {
             playSound("pop");
             adicionar(produto);
           }}
-          className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          className="btn-3d btn-3d-brand inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-primary-foreground"
         >
           <ShoppingCart className="h-4 w-4" aria-hidden="true" />
           Adicionar ao pedido
