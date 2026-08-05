@@ -142,7 +142,7 @@ export function CartDrawer() {
                     playSound("tap");
                     limpar();
                   }}
-                  className="rounded-xl border border-border px-4 py-2.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-destructive"
+                  className="btn-3d btn-3d-muted rounded-xl px-4 py-2.5 text-sm font-semibold text-muted-foreground"
                 >
                   Limpar
                 </button>
