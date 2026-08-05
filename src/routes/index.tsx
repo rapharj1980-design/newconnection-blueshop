@@ -8,6 +8,8 @@ import { EMPRESA, ENDERECO, WHATSAPP_EXIBICAO, waLink } from "@/data/contato";
 import { ProductCard } from "@/components/catalogo/ProductCard";
 import { CartProvider, useCart } from "@/components/catalogo/CartContext";
 import { CartDrawer } from "@/components/catalogo/CartDrawer";
+import { SoundToggle } from "@/components/catalogo/SoundToggle";
+import { playSound } from "@/lib/ui-sound";
 
 
 export const Route = createFileRoute("/")({
