@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { useCart, formatarBRL, precoNumero } from "./CartContext";
 import { waLink } from "@/data/contato";
 import { imagensPorProduto } from "@/data/imagens";
+import { playSound } from "@/lib/ui-sound";
 
 export function CartDrawer() {
   const { itens, aberto, setAberto, alterarQtd, remover, limpar, total, totalItens } = useCart();
