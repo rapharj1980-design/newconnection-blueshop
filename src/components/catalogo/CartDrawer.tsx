@@ -83,7 +83,10 @@ export function CartDrawer() {
                       <button
                         type="button"
                         aria-label={`Remover ${produto.nome} do pedido`}
-                        onClick={() => remover(produto.id)}
+                        onClick={() => {
+                          playSound("tap");
+                          remover(produto.id);
+                        }}
                         className="text-muted-foreground transition-colors hover:text-destructive"
                       >
                         <Trash2 className="h-4 w-4" aria-hidden="true" />
