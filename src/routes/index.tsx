@@ -67,7 +67,7 @@ function BotaoCarrinho({ className = "" }: { className?: string }) {
         setAberto(true);
       }}
       aria-label="Abrir pedido"
-      className={`relative inline-flex items-center gap-2 rounded-xl bg-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90 ${className}`}
+      className={`btn-3d btn-3d-whatsapp relative inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-whatsapp-foreground ${className}`}
     >
       <ShoppingCart className="h-4 w-4" aria-hidden="true" />
       Meu pedido

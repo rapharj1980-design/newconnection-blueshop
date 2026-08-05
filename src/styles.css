@@ -191,3 +191,65 @@
     letter-spacing: -0.02em;
   }
 }
+
+/* ---- Botões 3D (galalite / acrílico moldado) ---- */
+@utility btn-3d {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid color-mix(in oklab, var(--btn-base, var(--primary)) 70%, black);
+  background-image:
+    radial-gradient(120% 80% at 50% 0%, oklch(1 0 0 / 0.28) 0%, transparent 55%),
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--btn-base, var(--primary)) 88%, white) 0%,
+      var(--btn-base, var(--primary)) 45%,
+      color-mix(in oklab, var(--btn-base, var(--primary)) 70%, black) 100%
+    );
+  box-shadow:
+    0 6px 14px oklch(0 0 0 / 0.32),
+    0 2px 4px oklch(0 0 0 / 0.22),
+    inset 0 2px 3px oklch(1 0 0 / 0.45),
+    inset 0 -4px 0 oklch(0 0 0 / 0.22),
+    inset 0 0 12px oklch(1 0 0 / 0.12);
+  text-shadow: 0 1px 1px oklch(0 0 0 / 0.28);
+  transition:
+    transform 90ms ease,
+    box-shadow 140ms ease,
+    filter 140ms ease;
+
+  &:hover {
+    filter: brightness(0.94) saturate(1.05);
+    box-shadow:
+      0 10px 20px oklch(0 0 0 / 0.38),
+      0 3px 6px oklch(0 0 0 / 0.26),
+      inset 0 2px 3px oklch(1 0 0 / 0.4),
+      inset 0 -5px 0 oklch(0 0 0 / 0.26),
+      inset 0 0 12px oklch(1 0 0 / 0.1);
+  }
+
+  &:active {
+    transform: translateY(2px);
+    filter: brightness(0.9);
+    box-shadow:
+      0 1px 2px oklch(0 0 0 / 0.3),
+      inset 0 2px 4px oklch(0 0 0 / 0.35),
+      inset 0 -1px 0 oklch(0 0 0 / 0.2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+@utility btn-3d-brand {
+  --btn-base: oklch(0.52 0.20 258);
+}
+@utility btn-3d-whatsapp {
+  --btn-base: var(--whatsapp);
+}
+@utility btn-3d-muted {
+  --btn-base: oklch(0.93 0.02 245);
+  color: var(--foreground);
+  text-shadow: 0 1px 0 oklch(1 0 0 / 0.6);
+}
