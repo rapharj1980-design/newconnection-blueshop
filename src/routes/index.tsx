@@ -88,20 +88,12 @@ function HeaderLogo() {
     let dir: "up" | "down" | null = null;
     let girando = false;
 
-    let ultimoSom = 0;
-
     const onScroll = () => {
       const y = window.scrollY;
       const novaDir = y > lastY && y > 10 ? "down" : y < lastY ? "up" : dir;
-      const delta = Math.abs(y - lastY);
       lastY = y;
 
-      // Som suave de água enquanto rola (limitado para não poluir)
-      const agora = performance.now();
-      if (novaDir && delta > 4 && agora - ultimoSom > 650) {
-        ultimoSom = agora;
-        playSound(novaDir === "down" ? "water-down" : "water-up");
-      }
+
 
       if (!novaDir || novaDir === dir || girando) {
         dir = novaDir ?? dir;
