@@ -5,7 +5,7 @@
  * - Estado de mudo persistido em localStorage.
  */
 
-export type SoundName = "pop" | "tap" | "chime";
+export type SoundName = "pop" | "tap" | "chime" | "water-down" | "water-up";
 
 const STORAGE_KEY = "nc-sound-muted";
 const MASTER_VOLUME = 0.2; // 20% — sutil
