@@ -122,5 +122,62 @@ export function playSound(name: SoundName) {
       tone(audio, filter, { freq: 1046.5, type: "sine", duration: 0.12, gain: 0.5 });
       tone(audio, filter, { freq: 1568, type: "sine", duration: 0.16, gain: 0.3, delay: 0.05 });
       break;
+
+    // Scroll: fluxo suave de água (gota + leve fluxo filtrado)
+    case "water-down":
+      waterFlow(audio, filter, "down");
+      break;
+    case "water-up":
+      waterFlow(audio, filter, "up");
+      break;
   }
+}
+
+/** Ruído filtrado + gota com glide: sensação de água escorrendo. */
+function waterFlow(audio: AudioContext, out: GainNode, dir: "up" | "down") {
+  const t0 = audio.currentTime;
+  const dur = 0.5;
+
+  // Fluxo: ruído rosa-ish passado por bandpass que varre a frequência
+  const frames = Math.floor(audio.sampleRate * dur);
+  const buffer = audio.createBuffer(1, frames, audio.sampleRate);
+  const data = buffer.getChannelData(0);
+  let last = 0;
+  for (let i = 0; i < frames; i++) {
+    const white = Math.random() * 2 - 1;
+    last = (last + 0.035 * white) / 1.035;
+    data[i] = last * 3;
+  }
+
+  const noise = audio.createBufferSource();
+  noise.buffer = buffer;
+
+  const band = audio.createBiquadFilter();
+  band.type = "bandpass";
+  band.Q.value = 3.5;
+  const fA = dir === "down" ? 900 : 500;
+  const fB = dir === "down" ? 420 : 1100;
+  band.frequency.setValueAtTime(fA, t0);
+  band.frequency.exponentialRampToValueAtTime(fB, t0 + dur);
+
+  const env = audio.createGain();
+  env.gain.setValueAtTime(0.0001, t0);
+  env.gain.exponentialRampToValueAtTime(0.16, t0 + 0.09);
+  env.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+
+  noise.connect(band);
+  band.connect(env);
+  env.connect(out);
+  noise.start(t0);
+  noise.stop(t0 + dur);
+
+  // Gota discreta por cima
+  tone(audio, out, {
+    freq: dir === "down" ? 780 : 520,
+    glideTo: dir === "down" ? 380 : 940,
+    type: "sine",
+    duration: 0.16,
+    gain: 0.1,
+    delay: 0.02,
+  });
 }
