@@ -144,10 +144,8 @@ function Catalogo() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-4 py-3">
-          <a href="#topo" className="font-display text-xl font-extrabold tracking-tight">
-            <span className="text-foreground">New</span>
-            <span className="text-gradient-brand">Connection</span>
-          </a>
+          <HeaderLogo />
+
           <nav className="order-3 flex w-full gap-2 overflow-x-auto pb-1 text-sm md:order-2 md:w-auto md:flex-1 md:justify-center md:overflow-visible md:pb-0">
             {categorias.map((c) => (
               <a
