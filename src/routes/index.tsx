@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, MessageCircle, Phone, Search, ShieldCheck, ShoppingCart, Truck, Zap } from "lucide-react";
 
@@ -77,6 +77,39 @@ function BotaoCarrinho({ className = "" }: { className?: string }) {
         </span>
       )}
     </button>
+  );
+}
+
+function HeaderLogo() {
+  const [dir, setDir] = useState<"up" | "down">("up");
+
+  useEffect(() => {
+    let lastY = typeof window !== "undefined" ? window.scrollY : 0;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > lastY && y > 10) setDir("down");
+      else if (y < lastY) setDir("up");
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <div style={{ perspective: "1000px" }}>
+      <a
+        href="#topo"
+        className="block font-display text-xl font-extrabold tracking-tight transform-gpu"
+        style={{
+          transform: `rotateX(${dir === "down" ? 180 : 0}deg)`,
+          transition: "transform 0.4s ease",
+          transformStyle: "preserve-3d",
+        }}
+      >
+        <span className="text-foreground">New</span>
+        <span className="text-gradient-brand">Connection</span>
+      </a>
+    </div>
   );
 }
 
