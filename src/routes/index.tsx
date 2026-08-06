@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, MessageCircle, Phone, Search, ShieldCheck, ShoppingCart, Truck, Zap } from "lucide-react";
 
@@ -80,6 +80,39 @@ function BotaoCarrinho({ className = "" }: { className?: string }) {
   );
 }
 
+function HeaderLogo() {
+  const [dir, setDir] = useState<"up" | "down">("up");
+
+  useEffect(() => {
+    let lastY = typeof window !== "undefined" ? window.scrollY : 0;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > lastY && y > 10) setDir("down");
+      else if (y < lastY) setDir("up");
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <div style={{ perspective: "1000px" }}>
+      <a
+        href="#topo"
+        className="block font-display text-xl font-extrabold tracking-tight transform-gpu"
+        style={{
+          transform: `rotateX(${dir === "down" ? 180 : 0}deg)`,
+          transition: "transform 0.4s ease",
+          transformStyle: "preserve-3d",
+        }}
+      >
+        <span className="text-foreground">New</span>
+        <span className="text-gradient-brand">Connection</span>
+      </a>
+    </div>
+  );
+}
+
 function Catalogo() {
   const [busca, setBusca] = useState("");
 
@@ -111,10 +144,8 @@ function Catalogo() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-4 py-3">
-          <a href="#topo" className="font-display text-xl font-extrabold tracking-tight">
-            <span className="text-foreground">New</span>
-            <span className="text-gradient-brand">Connection</span>
-          </a>
+          <HeaderLogo />
+
           <nav className="order-3 flex w-full gap-2 overflow-x-auto pb-1 text-sm md:order-2 md:w-auto md:flex-1 md:justify-center md:overflow-visible md:pb-0">
             {categorias.map((c) => (
               <a
