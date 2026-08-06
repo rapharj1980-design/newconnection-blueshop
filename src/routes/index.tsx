@@ -81,16 +81,30 @@ function BotaoCarrinho({ className = "" }: { className?: string }) {
 }
 
 function HeaderLogo() {
-  const [dir, setDir] = useState<"up" | "down">("up");
+  const [giro, setGiro] = useState(0);
 
   useEffect(() => {
     let lastY = typeof window !== "undefined" ? window.scrollY : 0;
+    let dir: "up" | "down" | null = null;
+    let girando = false;
+
     const onScroll = () => {
       const y = window.scrollY;
-      if (y > lastY && y > 10) setDir("down");
-      else if (y < lastY) setDir("up");
+      const novaDir = y > lastY && y > 10 ? "down" : y < lastY ? "up" : dir;
       lastY = y;
+      if (!novaDir || novaDir === dir || girando) {
+        dir = novaDir ?? dir;
+        return;
+      }
+      dir = novaDir;
+      girando = true;
+      // volta sempre múltiplo de 360° → posição normal
+      setGiro((g) => g + (novaDir === "down" ? 360 : -360));
+      window.setTimeout(() => {
+        girando = false;
+      }, 200);
     };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -101,8 +115,8 @@ function HeaderLogo() {
         href="#topo"
         className="block font-display text-xl font-extrabold tracking-tight transform-gpu"
         style={{
-          transform: `rotateX(${dir === "down" ? 180 : 0}deg)`,
-          transition: "transform 0.4s ease",
+          transform: `rotateX(${giro}deg)`,
+          transition: "transform 0.2s linear",
           transformStyle: "preserve-3d",
         }}
       >
@@ -112,6 +126,7 @@ function HeaderLogo() {
     </div>
   );
 }
+
 
 function Catalogo() {
   const [busca, setBusca] = useState("");
